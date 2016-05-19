@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Alô Mamãe</string>
+
+    <string name="menu_item_salvar">Salvar</string>
+    <string name="menu_item_excluir">Excluir</string>
+    <string name="menu_item_cancelar">Cancelar</string>
+    <string name="menu_item_pesquisar">Pesquisar</string>
+    <string name="menu_item_novo">Novo</string>
+
+    <!-- telaprinc.xml -->
+    <string name="hint_vacinas">Controle de Vacinas</string>
+    <string name="hint_bebe"> Cadastro do Bebê</string>
+    <string name="hint_choro"> Choro </string>
+    <string name="hint_fralda"> Higiene </string>
+    <string name="hint_mama"> Alimentação </string>
+
+
+
+    <!-- tela_infobaby.xml -->
+
+    <string name="tela_info">Bebê</string>
+    <string name="telai_foto">Foto do bebê</string>
+    <string name="telai_nome">Nome: </string>
+    <string name="telai_peso">Peso: </string>
+    <string name="telai_idade">Data de Nascimento: </string>
+    <string name="telai_altura">Altura: </string>
+    <string name="telai_sexo">Sexo:</string>
+
+
+    <!-- activity_agenda.xml -->
+    <string name="actAgenda_comp">Agenda</string>
+    <string name="actAgenda_descricao">Descrição: </string>
+    <string name="actAgenda_data">Data: </string>
+    <string name="actAgenda_hora">Horário: </string>
+
+
+
+
+
+    </resources>

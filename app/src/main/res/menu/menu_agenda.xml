@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".control.MainActivity">
+
+    <group android:id="@+id/menu_actionbar" >
+        <item
+            android:id="@+id/menuitem_salvar"
+            android:icon="@drawable/ic_action_accept"
+            android:showAsAction="ifRoom|withText"
+            android:title="@string/menu_item_salvar" />
+        <item
+            android:id="@+id/menuitem_excluir"
+            android:icon="@drawable/ic_action_discard"
+            android:showAsAction="ifRoom|withText"
+            android:title="@string/menu_item_excluir"  />
+        <item
+            android:id="@+id/menuitem_cancelar"
+            android:icon="@drawable/ic_action_cancel"
+            android:showAsAction="ifRoom|withText"
+            android:title="@string/menu_item_cancelar"  />
+    </group>
+</menu>
+

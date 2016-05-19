@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:weightSum="1"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/alomami"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:layout_gravity="center"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:layout_width="95dp"
+            android:layout_height="84dp"
+            android:id="@+id/imageButton"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@drawable/vacina"
+            android:hint ="@string/hint_vacinas"
+            android:onClick="abrirVacina"
+            android:nestedScrollingEnabled="true" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="81dp"
+            android:id="@+id/imageButton7"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:src="@drawable/chorinho"
+            android:onClick="abrirchoro"
+            android:hint ="@string/hint_choro"
+            />
+
+        <ImageButton
+            android:layout_width="93dp"
+            android:layout_height="89dp"
+            android:id="@+id/imageButton4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:src="@drawable/cuidados"
+            android:nestedScrollingEnabled="false"
+            android:onClick="abrirChupeta" />
+
+
+        <ImageButton
+            android:layout_width="83dp"
+            android:layout_height="86dp"
+            android:id="@+id/imageButton6"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:src="@drawable/nsei"
+            android:onClick="abrirBerco" />
+
+        <ImageButton
+            android:layout_width="99dp"
+            android:layout_height="84dp"
+            android:id="@+id/imageButton2"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:onClick="abrirmama"
+            android:src="@drawable/mamadeira"
+            android:hint = "@string/hint_mama"
+            />
+
+        <ImageButton
+            android:layout_width="98dp"
+            android:layout_height="82dp"
+            android:id="@+id/imageButton3"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:src="@drawable/fralda"
+            android:onClick="abrirFralda"
+            android:hint ="@string/hint_fralda"
+            />
+
+        <ImageButton
+            android:layout_width="94dp"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton5"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:src="@drawable/babcy"
+            android:nestedScrollingEnabled="false"
+            android:onClick="abrirBaby"
+            android:hint ="@string/hint_bebe"
+            />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton8"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:src="@drawable/brinks"
+            android:onClick="abrirTrem" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="82dp"
+            android:id="@+id/imageButton9"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:src="@drawable/carrinho"
+            android:onClick="abrirCarrinho" />
+
+    </GridLayout>
+</LinearLayout>
