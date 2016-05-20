@@ -35,4 +35,3 @@ import aulaandroid.amanda.cadastrobebe.R;
             }
         }
     }
-
