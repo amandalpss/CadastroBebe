@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.text.SimpleDateFormat;
+
 import aulaandroid.amanda.cadastrobebe.model.Agenda;
 
 /**
@@ -54,7 +56,9 @@ public class AgendaDAO {
 
         valores.put(Contract.Agenda.COLUNA_DESCRICAO, ag.getDescricao());
         valores.put(Contract.Agenda.COLUNA_HORA, ag.getHorario());
-        valores.put(Contract.Agenda.COLUNA_DATA, ag.getData().toString());
+        valores.put(Contract.Agenda.COLUNA_DATA, new SimpleDateFormat("dd/MM/yyyy").format(ag.getData()));
+
+
 
         database.insert(Contract.Agenda.TABELA_NOME, null, valores);
 
@@ -66,7 +70,7 @@ public class AgendaDAO {
 
         valores.put(Contract.Agenda.COLUNA_DESCRICAO, ag.getDescricao());
         valores.put(Contract.Agenda.COLUNA_HORA, ag.getHorario());
-        valores.put(Contract.Agenda.COLUNA_DATA, ag.getData().toString());
+        valores.put(Contract.Agenda.COLUNA_DATA, new SimpleDateFormat("dd/MM/yyyy").format(ag.getData()));
 
         database.update(Contract.Agenda.TABELA_NOME, valores, Contract.Agenda.COLUNA_ID + " = " + ag.getId_compromisso(), null);
         return true;
