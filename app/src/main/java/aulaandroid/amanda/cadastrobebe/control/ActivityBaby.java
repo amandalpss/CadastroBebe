@@ -182,7 +182,7 @@ public class ActivityBaby extends Activity implements AdapterView.OnItemClickLis
                    }
 
 
-    public void salvar()  {
+   public void salvar()   {
 
         if(etNome.getText().toString().isEmpty() ||
                 etPeso.getText().toString().isEmpty() ||

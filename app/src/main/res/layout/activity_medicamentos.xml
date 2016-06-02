@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText_nome"
+            android:id="@+id/editText_nomemed"
             android:enabled="true" />
 
         <TextView
@@ -79,7 +79,7 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
                 <Button
@@ -88,7 +88,6 @@
                     android:layout_height="wrap_content"
                     android:text="ADICIONAR"
                     android:id="@+id/button"
-                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp" />
 
                 <Button
@@ -98,7 +97,8 @@
                     android:text="REMOVER"
                     android:id="@+id/button2"
                     android:layout_marginTop="50dp"
-                    android:layout_marginLeft="20dp" />
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp" />
             </LinearLayout>
         </LinearLayout>
 

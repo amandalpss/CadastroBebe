@@ -51,8 +51,7 @@ public class MainActivity extends Activity {
     }
 
     public void abrirBerco (View view) {
-        //startActivity(new Intent(MainActivity.this, ActivityHigiene.class));
-        Toast.makeText(MainActivity.this, "Em desenvolvimento.",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(MainActivity.this, ActivityMedicamentos.class));
     }
 
     public void abrirCarrinho(View view) {

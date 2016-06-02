@@ -23,6 +23,7 @@
         <activity android:name=".control.ActivityHigiene" />
         <activity android:name=".control.ActivityVacinas" />
         <activity android:name=".control.ActivityAgenda" />
+        <activity android:name=".control.ActivityMedicamentos" />
 
 
     </application>
