@@ -1,16 +1,24 @@
 package aulaandroid.amanda.cadastrobebe.control;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import aulaandroid.amanda.cadastrobebe.R;
 import aulaandroid.amanda.cadastrobebe.dao.Contract;
@@ -24,6 +32,13 @@ import aulaandroid.amanda.cadastrobebe.model.Medicamentos;
 
     private EditText etNome,etDosagem,etQuantidade;
     private Medicamentos med;
+    AlarmManager alarm;
+    private PendingIntent pending_intent;
+
+
+    private TimePicker alarmTimePicker;
+    private Button btAdicionar;
+    private Context context;
 
     private MedicamentosDAO meddao;
 
@@ -36,13 +51,54 @@ import aulaandroid.amanda.cadastrobebe.model.Medicamentos;
         meddao.open();
 
 
-
         etNome = (EditText) findViewById(R.id.editText_nomemed);
         etDosagem = (EditText) findViewById(R.id.editText_dosagem);
-        etQuantidade = (EditText) findViewById(R.id.editText_quant);
-        controlarEdicao(true);
+        etQuantidade = (EditText) findViewById(R.id.editText_quantidade);
+        btAdicionar = (Button) findViewById(R.id.btn_add);
+        alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
+        alarm = (AlarmManager) getSystemService(ALARM_SERVICE);
+                controlarEdicao(true);
+
+        this.context = this;
+    }
+
+
+    public void adcAlarme (View view) {
+
+        final Intent myIntent = new Intent(this.context, AlarmReceiver.class);
+        final Calendar calendar = Calendar.getInstance();
+
+        //calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
+        //calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
+
+        //final int hour = alarmTimePicker.getHour();
+        //final int minute = alarmTimePicker.getMinute();
+
+        calendar.set(Calendar.HOUR_OF_DAY, 3);
+        calendar.set(Calendar.MINUTE, 01);
+
+
+        myIntent.putExtra("extra", "yes");
+        pending_intent = PendingIntent.getBroadcast(ActivityMedicamentos.this, 0, myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        alarm.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pending_intent);
 
     }
+
+    public void removAlarme (View view) {
+
+        final Intent myIntent = new Intent(this.context, AlarmReceiver.class);
+
+        myIntent.putExtra("extra", "no");
+        sendBroadcast(myIntent);
+
+        alarm.cancel(pending_intent);
+
+
+    }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

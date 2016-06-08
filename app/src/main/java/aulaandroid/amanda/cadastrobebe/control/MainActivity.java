@@ -45,13 +45,14 @@ public class MainActivity extends Activity {
         Toast.makeText(MainActivity.this, "Em desenvolvimento.",Toast.LENGTH_SHORT).show();
     }
 
-    public void abrirTrem (View view) {
-        //startActivity(new Intent(MainActivity.this, ActivityHigiene.class));
-        Toast.makeText(MainActivity.this, "Em desenvolvimento.",Toast.LENGTH_SHORT).show();
+    public void abrirMed (View view) {
+        startActivity(new Intent(MainActivity.this, ActivityMedicamentos.class));
+
     }
 
     public void abrirBerco (View view) {
         startActivity(new Intent(MainActivity.this, ActivityMedicamentos.class));
+        Toast.makeText(MainActivity.this, "Em desenvolvimento.",Toast.LENGTH_SHORT).show();
     }
 
     public void abrirCarrinho(View view) {

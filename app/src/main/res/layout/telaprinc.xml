@@ -114,7 +114,7 @@
             android:layout_row="1"
             android:layout_column="2"
             android:src="@drawable/med2"
-            android:onClick="abrirTrem"
+            android:onClick="abrirMed"
             android:background="#ffffff" />
 
         <ImageButton
