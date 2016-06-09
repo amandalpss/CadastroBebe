@@ -95,6 +95,7 @@ import aulaandroid.amanda.cadastrobebe.model.Medicamentos;
         alarm.cancel(pending_intent);
 
 
+
     }
 
 
