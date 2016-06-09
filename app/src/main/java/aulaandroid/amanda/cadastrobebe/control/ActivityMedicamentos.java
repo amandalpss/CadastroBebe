@@ -68,14 +68,11 @@ import aulaandroid.amanda.cadastrobebe.model.Medicamentos;
         final Intent myIntent = new Intent(this.context, AlarmReceiver.class);
         final Calendar calendar = Calendar.getInstance();
 
-        //calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
-        //calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
+        calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
+        calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
 
-        //final int hour = alarmTimePicker.getHour();
-        //final int minute = alarmTimePicker.getMinute();
-
-        calendar.set(Calendar.HOUR_OF_DAY, 3);
-        calendar.set(Calendar.MINUTE, 01);
+        calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
+        calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
 
 
         myIntent.putExtra("extra", "yes");
